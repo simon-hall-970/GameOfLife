@@ -1,4 +1,4 @@
-const nextCellState = require('../nextCellState')
+const nextCellState = require('../client/components/GameFunctions/nextCellState')
 
 test('nextCellState', () => {
   expect(nextCellState(true, 2)).toBeTruthy()

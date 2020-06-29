@@ -1,4 +1,4 @@
-const isOverPopulated = require('../isOverPopulated')
+const isOverPopulated = require('../client/components/GameFunctions/isOverPopulated')
 
 test('isOverPopulated normal cases', () => {
   const expecteds = {

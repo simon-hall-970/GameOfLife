@@ -1,5 +1,5 @@
-const getNeighbours = require('../getNeighbours')
-const createBoard = require('../createBoard.js')
+const getNeighbours = require('../client/components/GameFunctions/getNeighbours')
+const createBoard = require('../client/components/GameFunctions/createBoard.js')
 
 test('getNeighbours in corner', () => {
   const board = createBoard(10)

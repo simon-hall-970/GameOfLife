@@ -1,4 +1,4 @@
-const isRessurectable = require('../isRessurectable')
+const isRessurectable = require('../client/components/GameFunctions/isRessurectable')
 
 test('isRessurectable normal cases', () => {
   const expecteds = {

@@ -1,4 +1,4 @@
-const isUnderPopulated = require('../isUnderPopulated')
+const isUnderPopulated = require('../client/components/GameFunctions/isUnderPopulated')
 
 test('isUnderPopulated normal cases', () => {
   const expecteds = {
