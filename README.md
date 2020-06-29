@@ -1,28 +1,19 @@
-# A starter webpack project for React
+# The Game of Life
 
-This is a starter project that uses webpack to transpile and bundle ES6 React code. To use, consider these steps:
+The Game of Life, also known simply as Life, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.
 
-* Fork this repo
-* Rename your repo according to the app you're building
+The game uses an evolving grid of cells that are either alive or dead.  The game begins with an initial grid state.  Each consecutive grid state, or generation, is determined according to three rules that determine which cells will die, which will survive, and which will come back to life.
 
-```sh
-git clone https://github.com/[your-account]/[your-app].git
-cd [your-app] && npm i
-```
 
-To start the development server with a watcher that rebuilds your code, run `npm run dev`. The assets built by webpack are placed in `server/public`. This folder is defined as a static folder in an Express.js server that can be started with `npm run server`.
+## Rules
+1. Any live cell with two or three live neighbours survives into the next generation.
 
-Additional components should be placed in `client/components`.
+2. Any dead cell with exactly three neighbours becomes a live cell in the next generation.
 
-## Separate client/server
+3. All other cells die in the next generation. (i.e. cells with <2 or >3 neighbours die.)
 
-The boilerplate is also set up to host the client using `webpack-dev-server` with hot module reloading etc. To use this method, in one terminal run:
-```sh
-npm run client
-```
-and in the other:
-```sh
-npm run server
-```
-The client will be available on http://localhost:8080 and the server on http://localhost:3000. Note that you will still need to manage CORS between the two, as they are on different ports.
+## Build
 
+Built using test driven development. 
+
+Using javascript, jest, node.js, react
