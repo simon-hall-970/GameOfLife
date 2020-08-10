@@ -2,7 +2,7 @@ import React from 'react'
 import Row from './Row'
 import {connect} from 'react-redux'
 import {emptyBoard} from '../actions/board'
-const createBoard = require('./GameFunctions/createBoard')
+import createBoard from './GameFunctions/createBoard'
 
 class GameBoard extends React.Component {
     

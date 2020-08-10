@@ -12,4 +12,4 @@ function createBoard (height, width=height) {
     return board
 }
 
-module.exports = createBoard
+export default createBoard

@@ -1,4 +1,4 @@
-const indicesAreOutOfBounds = require('./indicesAreOutOfBounds')
+import indicesAreOutOfBounds from './indicesAreOutOfBounds'
 
 function getNeighbours(cellRow, cellColumn, board) {
     let neighbours = []
@@ -14,4 +14,4 @@ function getNeighbours(cellRow, cellColumn, board) {
     return neighbours
 }
 
-module.exports = getNeighbours
+export default getNeighbours

@@ -1,5 +1,6 @@
 import React from 'react'
 import Randomize from './Randomize'
+import StartStop from './StartStop'
 
 
 
@@ -17,10 +18,9 @@ function Header() {
             </button>
 
             <Randomize />
+            <StartStop />
            
-            <button className="start stop">
-                start/stop
-            </button>
+
        
         </div>
     )

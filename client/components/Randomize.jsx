@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { randomBoard } from '../actions/board'
-const createBoard = require('./GameFunctions/createBoard')
+import createBoard from './GameFunctions/createBoard'
 
 function randNum(max, min) {
     return Math.floor(min + Math.random() * (max - min))

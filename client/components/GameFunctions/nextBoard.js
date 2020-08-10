@@ -1,5 +1,5 @@
-const nextCellState = require('./nextCellState')
-const countAliveNeighbours = require('./countAliveNeighbours')
+import nextCellState from './nextCellState'
+import countAliveNeighbours from './countAliveNeighbours'
 
 function nextBoard(currentBoard) {
     //create empty array for next generation i.e. next board
@@ -29,4 +29,4 @@ function nextBoard(currentBoard) {
      return nextGen
 }
 
-module.exports = nextBoard
+export default nextBoard

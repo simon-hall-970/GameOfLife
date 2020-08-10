@@ -1,4 +1,4 @@
-const getNeighbours = require('./getNeighbours')
+import getNeighbours from './getNeighbours'
 
 function countAliveNeighbours (cellRow, cellColumn, board) {
     const neighbours = getNeighbours(cellRow, cellColumn, board)
@@ -7,4 +7,4 @@ function countAliveNeighbours (cellRow, cellColumn, board) {
 return aliveNeighbours
 }
 
-module.exports = countAliveNeighbours
+export default countAliveNeighbours

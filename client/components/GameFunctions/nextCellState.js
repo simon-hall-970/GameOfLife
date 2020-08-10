@@ -1,6 +1,6 @@
-const isOverPopulated = require('./isOverPopulated')
-const isUnderPopulated = require('./isUnderPopulated')
-const isRessurectable = require('./isRessurectable')
+import isOverPopulated from './isOverPopulated'
+import isUnderPopulated from './isUnderPopulated'
+import isRessurectable from './isRessurectable'
 
 function nextCellState (cellState, neighbourCount) {
      
@@ -22,4 +22,4 @@ function nextCellState (cellState, neighbourCount) {
     }
 }
 
-module.exports = nextCellState
+export default nextCellState
