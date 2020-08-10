@@ -1,5 +1,5 @@
-const countAliveNeighbours = require('../client/components/GameFunctions/countAliveNeighbours')
-const createBoard = require('../client/components/GameFunctions/createBoard')
+import countAliveNeighbours from '../client/components/GameFunctions/countAliveNeighbours'
+import createBoard from '../client/components/GameFunctions/createBoard'
 
 test('countAliveNeighbours', () => {
   const board = createBoard(10)

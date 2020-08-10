@@ -1,7 +1,7 @@
-const indicesAreOutOfBounds = require('../client/components/GameFunctions/indicesAreOutOfBounds')
+import indicesAreOutOfBounds from '../client/components/GameFunctions/indicesAreOutOfBounds'
 
 test('indicesAreOutOfBounds', () => {
-  const testArray = [1, 2, 3]
+  const testArray = [[0,0,0],[0,0,0],[0,0,0]]
   const expecteds = {
     '-2': true,
     '-1': true,
