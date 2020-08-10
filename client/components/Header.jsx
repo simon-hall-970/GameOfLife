@@ -13,9 +13,9 @@ function Header() {
                 The Game of Life
             </h1>
 
-            <button className="gridsize">
+            {/* <button className="gridsize">
                 select grid size
-            </button>
+            </button> */}
 
             <Randomize />
             <StartStop />

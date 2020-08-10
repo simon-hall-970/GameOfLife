@@ -20,7 +20,7 @@ class StartStop extends React.Component {
                 this.myInt = setInterval(() => {
                     let nextGen = nextBoard(this.props.board)
                     this.props.dispatch(randomBoard(nextGen))
-                }, 100)
+                }, 30)
             } else {clearInterval(this.myInt)}
         })
     }
