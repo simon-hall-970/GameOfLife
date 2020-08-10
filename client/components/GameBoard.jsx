@@ -1,44 +1,33 @@
 import React from 'react'
 import Row from './Row'
+import {connect} from 'react-redux'
+import {emptyBoard} from '../actions/board'
 const createBoard = require('./GameFunctions/createBoard')
 
 class GameBoard extends React.Component {
     
-    state = {
-        boardSize: 'max'
+    componentDidMount() {
+        this.board()
     }
-
-    boardSize = () => {
-        if (this.state.boardSize == "max"){
-            return this.maxSquareSide()
-        } else { return this.state.boardSize}    
-    }
-
-    maxSquareSide = () => {
-        return (
-            Math.min(
-                (Math.floor(window.innerWidth/10)),
-                (Math.floor(window.innerHeight/10-4))
-            )
-        )
-    }
-
     board = () => {
-        let boardArr = createBoard(this.boardSize())
-        return(boardArr.map((row, index) => 
-            <Row key={index} row={row}/>)
-        )
+        let height = Math.floor(window.innerHeight/10-4)
+        let width = Math.floor(window.innerWidth/10)
+        let boardArr = createBoard(height, width)
+        this.props.dispatch(emptyBoard(boardArr))
     }
-    
 
     render() {
-
+        let gameBoard = (this.props.board.map((row, index) => 
+        <Row key={index} row={row}/>))
         return (
             <div className="game-board">
-                {this.board()}
+                {gameBoard}
             </div>
         )
     }
 }
 
-export default GameBoard
+const mapStateToProps = reduxState => (
+    {board: reduxState.board})
+
+export default connect(mapStateToProps)(GameBoard)

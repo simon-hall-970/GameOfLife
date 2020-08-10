@@ -1,5 +1,8 @@
 import React from 'react'
 
+
+
+
 function Header() {
     return(
         <div className="head container">
@@ -7,17 +10,17 @@ function Header() {
                 The Game of Life
             </h1>
 
-            <div className="gridsize">
+            <button className="gridsize">
                 select grid size
-            </div>
+            </button>
 
-            <div className="genesis">
-                original board state
-            </div>
+            <button className="genesis">
+                randomize initial state
+            </button>
            
-            <div className="start stop">
+            <button className="start stop">
                 start/stop
-            </div>
+            </button>
        
         </div>
     )
