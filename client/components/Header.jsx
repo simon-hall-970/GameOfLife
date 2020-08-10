@@ -1,9 +1,11 @@
 import React from 'react'
+import Randomize from './Randomize'
 
 
 
 
 function Header() {
+
     return(
         <div className="head container">
             <h1>
@@ -14,9 +16,7 @@ function Header() {
                 select grid size
             </button>
 
-            <button className="genesis">
-                randomize initial state
-            </button>
+            <Randomize />
            
             <button className="start stop">
                 start/stop
