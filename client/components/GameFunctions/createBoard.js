@@ -7,4 +7,6 @@ function createBoard (size) {
     return board
 }
 
+
+
 module.exports = createBoard

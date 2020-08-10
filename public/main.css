@@ -1,7 +1,25 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: 0.5px solid green;
   margin: 0;
   padding: 0;
+}
+.game-board{
+  display: block;
+  position: relative;
+}
+.row {
+  font-size: 0px;
+}
+
+.cell {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 0.5px solid black;
+  background-color: white;
+}
+
+.live {
+  background-color: black;
 }
