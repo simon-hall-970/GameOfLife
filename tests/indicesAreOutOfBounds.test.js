@@ -1,7 +1,7 @@
 import indicesAreOutOfBounds from '../client/components/GameFunctions/indicesAreOutOfBounds'
 
 test('indicesAreOutOfBounds', () => {
-  const testArray = [1, 2, 3]
+  const testArray = [1,2,3]
   const expecteds = {
     '-2': true,
     '-1': true,

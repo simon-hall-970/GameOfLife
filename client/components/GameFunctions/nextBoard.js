@@ -4,7 +4,6 @@ import countAliveNeighbours from './countAliveNeighbours'
 function nextBoard(currentBoard) {
 
     let nextGen = []
-    console.log("currentBoard :",currentBoard)
 
     for(let i=0; i<currentBoard.length; i++) {
 
@@ -26,7 +25,6 @@ function nextBoard(currentBoard) {
         nextGen.push(row)
     }
 
-    console.log("nextGen: ", nextGen)
      return nextGen
 }
 
