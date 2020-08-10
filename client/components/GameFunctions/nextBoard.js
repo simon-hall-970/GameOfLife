@@ -20,7 +20,6 @@ function nextBoard(currentBoard) {
 
             //determine next generation of current cell then push to row
             let nextCellGen = nextCellState(cellState, neighCount)
-            
             row.push(nextCellGen)
         }
         //after looping through each cell in a row push the row to the next board generation

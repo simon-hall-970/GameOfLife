@@ -1,11 +1,12 @@
 import React from 'react'
+import Header from './Header'
 import GameBoard from './GameBoard'
 
 
 const App = () => {
   return (
     <>
-      <h1>The Game of Life</h1>
+      <Header />
       <GameBoard />
     </>
   )
