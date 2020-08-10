@@ -9,19 +9,19 @@ class StartStop extends React.Component {
         playing: false
     }
 
-    
+    myInt
+
     play =() =>{
-        let myInt
         let playing = !this.state.playing
         this.setState({
             playing,
         }, () => {
             if (this.state.playing) {
-                myInt = setInterval(() => {
+                this.myInt = setInterval(() => {
                     let nextGen = nextBoard(this.props.board)
                     this.props.dispatch(randomBoard(nextGen))
                 }, 100)
-            } else {clearInterval(myInt)}
+            } else {clearInterval(this.myInt)}
         })
     }
 
