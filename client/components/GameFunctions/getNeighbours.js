@@ -1,7 +1,7 @@
 import indicesAreOutOfBounds from './indicesAreOutOfBounds'
 
 function getNeighbours(cellRow, cellColumn, board) {
-    let neighbours = []
+    let neighbours = [0]
 
     for (let i = cellRow - 1; i <= cellRow + 1; i++) {
 

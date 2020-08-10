@@ -1,4 +1,7 @@
 import React from 'react'
+import nextBoard from './GameFunctions/nextBoard'
+import { connect } from 'react-redux'
+import { randomBoard } from '../actions/board'
 
 class StartStop extends React.Component {
 
@@ -6,10 +9,19 @@ class StartStop extends React.Component {
         playing: false
     }
 
+    myInt
+
     play =() =>{
         let playing = !this.state.playing
         this.setState({
             playing,
+        }, () => {
+            if (this.state.playing) {
+                this.myInt = setInterval(() => {
+                    let nextGen = nextBoard(this.props.board)
+                    this.props.dispatch(randomBoard(nextGen))
+                }, 100)
+            } else {clearInterval(this.myInt)}
         })
     }
 
@@ -21,5 +33,9 @@ class StartStop extends React.Component {
         )
     }
 }
-
-export default StartStop
+function mapStateToProps(reduxState){
+    return({
+        board: reduxState.board
+    })
+}
+export default connect(mapStateToProps)(StartStop)
