@@ -1,4 +1,4 @@
-const isOutOfBounds = require('../client/components/GameFunctions/isOutOfBounds')
+import isOutOfBounds from '../client/components/GameFunctions/isOutOfBounds'
 
 test('isOutOfBounds', () => {
   const testArray = [1, 2, 3]

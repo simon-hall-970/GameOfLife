@@ -1,4 +1,4 @@
-const createBoard = require('../client/components/GameFunctions/createBoard')
+import createBoard from '../client/components/GameFunctions/createBoard'
 
 test('createBoard returns boards with the correct dimensions', () => {
   for (let i = 1; i < 5; i++) {

@@ -1,5 +1,5 @@
-const createBoard = require('../client/components/GameFunctions/createBoard')
-const nextBoard = require('../client/components/GameFunctions/nextBoard')
+import createBoard from '../client/components/GameFunctions/createBoard'
+import nextBoard from '../client/components/GameFunctions/nextBoard'
 
 test('nextBoard is not equal to createBoard', () => {
   const board = createBoard(10)
