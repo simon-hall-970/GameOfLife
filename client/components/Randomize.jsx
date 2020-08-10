@@ -32,7 +32,6 @@ class Randomize extends React.Component{
         let randBoard = createBoard(height, width)
         rowIndexes.forEach((row, index) => {
             let col = columnIndexes[index]
-            console.log(col, row)
             randBoard[row][col] = 1
         })
 
