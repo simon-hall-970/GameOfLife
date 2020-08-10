@@ -1,8 +1,14 @@
 import React from 'react'
+import Header from './Header'
+import GameBoard from './GameBoard'
+
 
 const App = () => {
   return (
-    <h1>React development has begun!</h1>
+    <>
+      <Header />
+      <GameBoard />
+    </>
   )
 }
 
