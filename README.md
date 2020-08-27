@@ -32,7 +32,7 @@ Using javascript, enzyme, jest, node.js, react, and redux.
 
 # How
 
-Originally built in javascript with each function in it's own javascript file to run in the console as 0s and 1s.  This was an exercise in test development. Tests were written with jest.
+Originally built in javascript with each function in it's own javascript file to run in the console as 0s and 1s.  This was an exercise in test development and writing algorithms. Tests were written with jest.
 
 Later I decided I would bring them into react to run on the front end with the intent outlined above.
 
@@ -45,9 +45,9 @@ I decided a reasonable initial random state would have between 15-45% of the tot
 Similarly each generation uses the rules to update the cells that need updating on a copy of the current board. Once that board is updated it is dispatched to state triggering a re-render. Each generation is set to update every 300ms.
 
 
-Obviously as the viewport size increases the gameboard array also increases and when things start getting too big the processing slows down.  I will need to look into some ways to optimize the process. Increasing the cell size, having a maximum board size, or a combination of both could work.  However, I tend to like the cell size and the full screen view of the gameboard.  I will have to explore other ways to get more speed first.  In the meantime a viewport width of around 1470x880 with 300ms cycle speed seems to have a pleasing effect.
+Obviously as the viewport size increases the gameboard array also increases and when things start getting too big the processing slows down.  I will need to look into some ways to optimize the process. Increasing the cell size, having a maximum board size, or a combination of both could work.  However, I tend to like the cell size and the full screen view of the gameboard.  I will have to explore other ways to get more speed first.  In the meantime a viewport width of around 1470x880 with 100ms cycle speed seems to have a pleasing effect.
 
-Note on responsiveness: The header is responsive. However, due to the nature of the game it is not intended that the viewport is resized when the game is running. Currently the gameboard height and width is determined by the viewport height and width at the time of load. I do intend to look at some solutions in future though.  Perhaps shrinking-growing the cells and rows to a maximum / minimum height as the size decreases and then having an overflow. It's probably also a good idea that I set the randomize and refresh buttons to update the height and width.
+Note on responsiveness: The header is responsive. The However, due to the nature of the game it is not intended that the viewport is resized when the game is running. Currently the gameboard height and width is determined by the viewport height and width at the time of load. I do intend to look at some solutions in future though.  Perhaps shrinking-growing the cells and rows to a maximum / minimum height as the size decreases and then having an overflow. It's probably also a good idea that I set the randomize and refresh buttons to update the height and width.
 
 
 
