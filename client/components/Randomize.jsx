@@ -16,9 +16,9 @@ class Randomize extends React.Component{
         const width = this.props.board[0].length
         const totalCells = height * width
 
-        //how many live cells randomly between 15% - 45% (tweak as required)
-        let liveCellPercentage = randNum(15, 45)
-        let randLiveCellsCount = totalCells * liveCellPercentage / 100
+        //number of live cells randomly selected between 15% - 45% (to avoid too much initial over/under population)
+        let liveCellPercentage = randNum(15, 45) / 100
+        let randLiveCellsCount = totalCells * liveCellPercentage
 
         let rowIndexes = []
             for (let i = 0; i < randLiveCellsCount; i++) {
