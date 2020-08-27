@@ -10,8 +10,9 @@ class GameBoard extends React.Component {
         this.board()
     }
     board = () => {
-        let height = Math.floor(window.innerHeight/10-4)
-        let width = Math.floor(window.innerWidth/10)
+        //set board size to fill window size(less header)
+        let height = Math.floor(window.innerHeight/15-3)
+        let width = Math.floor(window.innerWidth/15)
         let boardArr = createBoard(height, width)
         this.props.dispatch(emptyBoard(boardArr))
     }

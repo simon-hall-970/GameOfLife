@@ -9,10 +9,11 @@ function Header() {
 
     return(
         <div className="head container">
-            <div></div> {/* two empty divs to hack flexbox space evenly*/}
+            <div></div> {/* three empty divs to hack 'flexbox: space evenly' css*/}
+            <div></div>
             <div></div>
             <h1>
-                The Game of Life
+                Conway's Game of Life
             </h1>
 
             {/* <button className="gridsize">
