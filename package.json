@@ -18,7 +18,7 @@
     "wphelp": "webpack --help",
     "hotload": "webpack-dev-server --config=webpack.config.js",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d public"
   },
   "babel": {
     "presets": [
