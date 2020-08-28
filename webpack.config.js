@@ -5,7 +5,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
-    // publicPath: "/GameOfLife/"
+    publicPath: "/GameOfLife/"
   },
   mode: 'development',
   module: {
