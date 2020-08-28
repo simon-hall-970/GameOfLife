@@ -1,15 +1,11 @@
-import { EMPTY_BOARD, RANDOM_BOARD } from '../actions/board'
+import { UPDATE_BOARD } from '../actions/board'
 
 
 const board = (state=[], action) => {
     switch (action.type) {
 
-    case EMPTY_BOARD:
+    case UPDATE_BOARD:
         return action.board
-
-    case RANDOM_BOARD:
-        return action.board
-
 
     default: 
         return state

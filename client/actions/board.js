@@ -1,12 +1,6 @@
-export const EMPTY_BOARD = 'EMPTY_BOARD'
-export const RANDOM_BOARD = 'RANDOM_BOARD'
+export const UPDATE_BOARD = 'UPDATE_BOARD'
 
-export const emptyBoard = board => ({
-    type: EMPTY_BOARD,
-    board,
-})
-
-export const randomBoard = board => ({
-    type: RANDOM_BOARD,
+export const updateBoard = board => ({
+    type: UPDATE_BOARD,
     board
 })

@@ -1,7 +1,7 @@
 import React from 'react'
 import Row from './Row'
 import {connect} from 'react-redux'
-import {emptyBoard} from '../actions/board'
+import {updateBoard} from '../actions/board'
 import createBoard from './GameFunctions/createBoard'
 
 class GameBoard extends React.Component {
@@ -13,8 +13,8 @@ class GameBoard extends React.Component {
         //set board size to fill window size(less header)
         let height = Math.floor(window.innerHeight/10-4)
         let width = Math.floor(window.innerWidth/10)
-        let boardArr = createBoard(height, width)
-        this.props.dispatch(emptyBoard(boardArr))
+        let emptyBoard = createBoard(height, width)
+        this.props.dispatch(updateBoard(emptyBoard))
     }
 
     render() {

@@ -21,8 +21,8 @@ class StartStop extends React.Component {
             if (this.state.playing) {
                 this.myInt = setInterval(() => {
                     let nextGen = nextBoard(this.props.board)
-                    this.props.dispatch(randomBoard(nextGen))
-                }, 100)
+                    this.props.dispatch(udpateBoard(nextGen))
+                }, 10)
             } else {clearInterval(this.myInt)}
         })
     }

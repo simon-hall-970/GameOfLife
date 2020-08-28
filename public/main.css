@@ -49,6 +49,7 @@ button:active {
 .game-board{
   display: block;
   position: relative;
+  overflow: hidden;
 }
 .row {
   font-size: 0px;

@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { randomBoard } from '../actions/board'
+import { updateBoard } from '../actions/board'
 import createBoard from './GameFunctions/createBoard'
 
 function randNum(max, min) {
@@ -21,9 +21,10 @@ class Randomize extends React.Component{
         let randLiveCellsCount = totalCells * liveCellPercentage
 
         let rowIndexes = []
-            for (let i = 0; i < randLiveCellsCount; i++) {
-                rowIndexes.push(randNum(0, height))
-            }
+        for (let i = 0; i < randLiveCellsCount; i++) {
+            rowIndexes.push(randNum(0, height))
+        }
+
         let columnIndexes = []
         for (let i = 0; i < randLiveCellsCount; i++) {
             columnIndexes.push(randNum(0, width))
@@ -35,7 +36,7 @@ class Randomize extends React.Component{
             randBoard[row][col] = 1
         })
 
-        this.props.dispatch(randomBoard(randBoard))
+        this.props.dispatch(updateBoard(randBoard))
     }
 
     render() {
