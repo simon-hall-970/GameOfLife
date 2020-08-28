@@ -266,8 +266,8 @@ var GameBoard = /*#__PURE__*/function (_React$Component) {
 
     _defineProperty(_assertThisInitialized(_this), "board", function () {
       //set board size to fill window size(less header)
-      var height = Math.floor(window.innerHeight / 15 - 3);
-      var width = Math.floor(window.innerWidth / 15);
+      var height = Math.floor(window.innerHeight / 10 - 4);
+      var width = Math.floor(window.innerWidth / 10);
       var boardArr = Object(_GameFunctions_createBoard__WEBPACK_IMPORTED_MODULE_4__["default"])(height, width);
 
       _this.props.dispatch(Object(_actions_board__WEBPACK_IMPORTED_MODULE_3__["emptyBoard"])(boardArr));
@@ -10932,7 +10932,7 @@ var convertCurry = convert.bind(null, react__WEBPACK_IMPORTED_MODULE_2___default
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "* {\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n/* header styles */\r\n.head{\r\n  background: #73c565;\r\n  display: flex;\r\n  justify-content: space-evenly;\r\n}\r\n\r\n/*button styles*/\r\nbutton {\r\n\tbox-shadow: 0px 1px 0px 0px #1c1b18;\r\n\tbackground:linear-gradient(to bottom, #c0eeb8 5%, #8dd87f 100%);\r\n\tbackground-color:#a6dd9c;\r\n\tborder-radius:25px;\r\n\tborder:2px solid #406938;\r\n  display:inline-block;\r\n  position: relative;\r\n\tcursor:pointer;\r\n\tcolor:#393f24;\r\n\tfont-family:Arial;\r\n\tfont-size:14px;\r\n  font-weight:bold;\r\n  max-height: 30px;\r\n  top: 3px;\r\n  padding: 0px 10px;\r\n\ttext-decoration:none;\r\n\ttext-shadow:0px 1px 0px #c0eeb8;\r\n}\r\nbutton:hover {\r\n\tbackground:linear-gradient(to bottom, #cdf1c6 5%, #a3e298 100%);\r\n\tbackground-color:#b7e9ae;\r\n}\r\nbutton:active {\r\n\tposition:relative;\r\n\ttop:1px;\r\n}\r\n\r\n.stop {\r\n  width: 35px;\r\n}\r\n\r\n/* game board styles */\r\n.game-board{\r\n  display: block;\r\n  position: relative;\r\n}\r\n.row {\r\n  font-size: 0px;\r\n}\r\n\r\n.cell {\r\n  display: inline-block;\r\n  width: 15px;\r\n  height: 15px;\r\n  border: 0.5px solid black;\r\n  background-color: white;\r\n}\r\n\r\n.live {\r\n  background-color: black;\r\n}", ""]);
+exports.push([module.i, "* {\r\n  -webkit-box-sizing: border-box;\r\n          box-sizing: border-box;\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n/* header styles */\r\n.head{\r\n  background: #73c565;\r\n  display: flex;\r\n  justify-content: space-evenly;\r\n}\r\n\r\n/*button styles*/\r\nbutton {\r\n\tbox-shadow: 0px 1px 0px 0px #1c1b18;\r\n\tbackground:linear-gradient(to bottom, #c0eeb8 5%, #8dd87f 100%);\r\n\tbackground-color:#a6dd9c;\r\n\tborder-radius:25px;\r\n\tborder:2px solid #406938;\r\n  display:inline-block;\r\n  position: relative;\r\n\tcursor:pointer;\r\n\tcolor:#393f24;\r\n\tfont-family:Arial;\r\n\tfont-size:14px;\r\n  font-weight:bold;\r\n  max-height: 30px;\r\n  top: 3px;\r\n  padding: 0px 10px;\r\n\ttext-decoration:none;\r\n\ttext-shadow:0px 1px 0px #c0eeb8;\r\n}\r\nbutton:hover {\r\n\tbackground:linear-gradient(to bottom, #cdf1c6 5%, #a3e298 100%);\r\n\tbackground-color:#b7e9ae;\r\n}\r\nbutton:active {\r\n\tposition:relative;\r\n\ttop:1px;\r\n}\r\n\r\n.stop {\r\n  width: 35px;\r\n}\r\n\r\n/* game board styles */\r\n.game-board{\r\n  display: block;\r\n  position: relative;\r\n}\r\n.row {\r\n  font-size: 0px;\r\n}\r\n\r\n.cell {\r\n  display: inline-block;\r\n  width: 10px;\r\n  height: 10px;\r\n  border: 0.5px solid black;\r\n  background-color: white;\r\n}\r\n\r\n.live {\r\n  background-color: black;\r\n}", ""]);
 // Exports
 module.exports = exports;
 
