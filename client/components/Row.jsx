@@ -3,7 +3,7 @@ import Cell from './Cell'
 
 class Row extends React.Component {
 
-    Cell = () => {
+    row = () => {
         let row = this.props.row
         return row.map((cell, index) => {
             return <Cell key={index} cellState={cell}/>
@@ -13,7 +13,7 @@ class Row extends React.Component {
     render() {
         return (
             <div className="row">
-                {this.Cell()}
+                {this.row()}
             </div>
         )
     }

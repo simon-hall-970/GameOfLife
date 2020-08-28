@@ -11,7 +11,6 @@ class Randomize extends React.Component{
 
 
     randomizeBoard = () => {
-        console.log('button clicked')
         const height = this.props.board.length
         const width = this.props.board[0].length
         const totalCells = height * width

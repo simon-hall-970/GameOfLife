@@ -5,7 +5,7 @@ class Cell extends React.Component {
 
     render() {
         return(
-        <div className={`cell ${this.props.cellState ? "live" : "dead"}`}/>
+        <div onClick={this.changeState} className={`cell ${this.props.cellState ? "live" : "dead"}`}/>
         )
     }
 }
