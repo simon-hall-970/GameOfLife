@@ -19,9 +19,10 @@ class StartStop extends React.Component {
         this.setState({
             playing: switchPlayState,
         }, () => {
-            const {playing} = this.state
-            console.log(playing)
+            const { playing } = this.state
+
             this.props.dispatch(togglePlayState(playing))
+            
             if (playing) {
                 this.myInt = setInterval(() => {
                     let nextGen = nextBoard(this.props.board)
