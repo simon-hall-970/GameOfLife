@@ -1,9 +1,10 @@
 import React from 'react'
 import nextBoard from './GameFunctions/nextBoard'
 import { connect } from 'react-redux'
-import { randomBoard } from '../actions/board'
+import { updateBoard } from '../actions/board'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faStop} from '@fortawesome/free-solid-svg-icons'
+import { togglePlayState } from '../actions/playState'
 
 class StartStop extends React.Component {
 
@@ -14,17 +15,23 @@ class StartStop extends React.Component {
     myInt
 
     play =() =>{
-        let playing = !this.state.playing
+        let switchPlayState = !this.state.playing
         this.setState({
-            playing,
+            playing: switchPlayState,
         }, () => {
-            if (this.state.playing) {
+            const { playing } = this.state
+
+            this.props.dispatch(togglePlayState(playing))
+            
+            if (playing) {
                 this.myInt = setInterval(() => {
                     let nextGen = nextBoard(this.props.board)
-                    this.props.dispatch(udpateBoard(nextGen))
+                    this.props.dispatch(updateBoard(nextGen))
                 }, 10)
             } else {clearInterval(this.myInt)}
         })
+
+        
     }
 
     playIcon = <FontAwesomeIcon icon={faPlay} />

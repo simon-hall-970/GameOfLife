@@ -18,8 +18,8 @@ class GameBoard extends React.Component {
     }
 
     render() {
-        let gameBoard = (this.props.board.map((row, index) => 
-        <Row key={index} row={row}/>))
+        let gameBoard = (this.props.board.map((rowArr, index) => 
+        <Row key={index} rowCells={rowArr} rowIndex={index}/>))
         return (
             <div className="game-board">
                 {gameBoard}

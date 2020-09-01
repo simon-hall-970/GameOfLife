@@ -3,17 +3,17 @@ import Cell from './Cell'
 
 class Row extends React.Component {
 
-    Cell = () => {
-        let row = this.props.row
-        return row.map((cell, index) => {
-            return <Cell key={index} cellState={cell}/>
+    row = () => {
+        let { rowCells, rowIndex } = this.props
+        return rowCells.map((cell, index) => {
+            return <Cell key={index} rowIndex={rowIndex} colIndex={index} cellState={cell}/>
         })
     }
 
     render() {
         return (
             <div className="row">
-                {this.Cell()}
+                {this.row()}
             </div>
         )
     }
